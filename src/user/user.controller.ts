@@ -7,21 +7,19 @@ import { JwtAuthGuard } from 'src/guards/jwtAuthGuard';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  
   @Get()
   @UseGuards(JwtAuthGuard)
   findAll(){
     return this.userService.getAllUsers()
   }
 
-  
-  @Get(':id')
+  @Get('get-user/:id')
   @UseGuards(JwtAuthGuard)
   getUser(@Param('id') userId: string){
     return this.userService.getUserById(userId);
   }
 
-  @Post()
+  @Post('add-user')
   createUser(@Body(new ValidationPipe({ transform: true })) createUser: CreateUserDto){
     return this.userService.createUser(createUser);
   }

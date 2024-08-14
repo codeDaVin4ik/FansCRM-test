@@ -44,13 +44,15 @@ To set up the project on your local machine, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/codeDaVin4ik/FansCRM-test.git
+   
    or via ssh/github cli
 2. Start Docker client.
 
 3. Run the application using Docker Compose: 
   docker-compose up
 
-4. First you should add a new user and login by it's credentials. It gives you a jwt token wich you can add to 
+4. First you should add a new user (/api/v1/users/add-user). 
+  Then you can login by it's credentials (/api/v1/auth/login). It gives you a jwt token wich you can add to 
   all another api calls as a header 'Authorization' with 'Bearer <jwt_token>'.
 
 

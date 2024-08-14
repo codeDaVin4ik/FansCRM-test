@@ -43,7 +43,8 @@ To set up the project on your local machine, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/codeDaVin4ik/FansCRM-test.git
+   or via ssh/github cli
 2. Start Docker client.
 
 3. Run the application using Docker Compose: 
@@ -51,7 +52,9 @@ To set up the project on your local machine, follow these steps:
 
 4. First you should add a new user and login by it's credentials. It gives you a jwt token wich you can add to 
   all another api calls as a header 'Authorization' with 'Bearer <jwt_token>'.
-Important:
+
+
+!!! Important:
 The .env file is already added to the project for ease of use, but this is a bad practice. In a real-world scenario, sensitive information like database credentials should be managed securely and not committed to the repository.
 
 Prerequisites
